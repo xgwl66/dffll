@@ -1,0 +1,316 @@
+@font-face {
+    font-family: "Han Font";
+    font-style: normal;
+    font-display: swap;
+    src: url("HarmonyOS_Sans_SC_Medium.ttf") format("truetype")
+}
+
+/* 保留 */
+body>.fixed-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0
+}
+
+body>.fixed-section>.vh-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(1600px at 70% 120%, #2e2a42 10%, #020409 100%)
+}
+
+body>.fixed-section>.vh_boy {
+    position: fixed;
+    width: 1600px;
+    height: 300px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: url("boy.svg") no-repeat;
+    background-size: cover
+}
+
+/* 保留 */
+body>.page>.main>article>h3 {
+    color: #fff;
+    font-size: 1.13rem
+}
+
+body>.page>.main>article>section {
+    position: relative;
+    margin: 1.18rem 0 1.61rem;
+    height: max-content;
+    border-radius: .56rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    cursor: pointer
+}
+
+body>.page>.main>article>section>p {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 18.88px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    font-size: .99rem;
+    line-height: 1;
+    color: #9895a1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1
+}
+
+body>.page>.main>article>section>p::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: .37rem;
+    background-color: rgba(255, 255, 255, 0.18);
+    transition: all .3s
+}
+
+body>.page>.main>article>section>p:hover::after {
+    width: 100%;
+    border-top-right-radius: .56rem;
+    border-bottom-right-radius: .56rem
+}
+
+body>.page>.main>article>section>p>span {
+    font-size: .99rem;
+    line-height: 1;
+    color: #9895a1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+body>.page>.main>article>section>p>span:nth-of-type(1) {
+    flex: 1
+}
+
+body>.page>.main>article>section>p>span:nth-of-type(2) {
+    width: max-content;
+    color: #fff
+}
+
+body>.page>.main>article>section.pms {
+    cursor: auto
+}
+
+body>.page>.main>article>section.pms>.r-item {
+    box-sizing: border-box;
+    padding-left: 18.88px;
+    display: grid
+}
+
+body>.page>.main>article>section.pms>.r-item>.r-i-item {
+    height: 3rem;
+    text-align: center;
+    color: #fff;
+    font-size: .88rem;
+    line-height: 3rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    user-select: text
+}
+
+body>.page>.main>article>section.pms>.r-item>.r-i-item:nth-of-type(1),
+body>.page>.main>article>section.pms>.r-item>.r-i-item:nth-last-of-type(1) {
+    text-align: left
+}
+
+body>.page>.main>article>section.pms.request>.r-item {
+    grid-template-columns: 3.63rem 4.25rem calc(100% - 7.88rem)
+}
+
+body>.page>.main>article>section.pms.respons>.r-item {
+    grid-template-columns: 3.63rem calc(100% - 3.63rem)
+}
+
+body>.page>.main>article>pre {
+    width: 100%;
+    height: max-content;
+    border-radius: .56rem;
+    overflow: hidden
+}
+
+body>.page>.main>article>pre>code.hljs {
+    background: #252236;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "San Francisco", Arial !important;
+    user-select: text
+}
+/* 保留 */
+body>.home>.main>.article-list {
+    box-sizing: border-box;
+    margin: 0 auto 28px;
+    width: 100%;
+    max-width: 1288px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px
+}
+
+body>.home>.main>.article-list>.article-list-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 118px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: all .3s;
+    overflow: hidden
+}
+
+body>.home>.main>.article-list>.article-list-item:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: .2s all;
+    animation: vh-linkitem-hover 1s cubic-bezier(.315, .605, .375, .925) forwards;
+    -webkit-animation: vh-linkitem-hover 1s cubic-bezier(.315, .605, .375, .925) forwards
+}
+
+body>.home>.main>.article-list>.article-list-item:hover::after {
+    height: 100%
+}
+
+body>.home>.main>.article-list>.article-list-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    height: 3.6px;
+    transition: all .2s;
+    z-index: 1
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 1)::after {
+    background: linear-gradient(to right, rgba(243, 25, 127, 0.18), rgba(247, 118, 59, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 2)::after {
+    background: linear-gradient(to right, rgba(247, 118, 59, 0.18), rgba(255, 251, 4, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 3)::after {
+    background: linear-gradient(to right, rgba(255, 251, 4, 0.18), rgba(0, 255, 34, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 4)::after {
+    background: linear-gradient(to right, rgba(0, 255, 34, 0.18), rgba(12, 228, 228, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 5)::after {
+    background: linear-gradient(to right, rgba(12, 228, 228, 0.18), rgba(87, 0, 250, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item:nth-of-type(6n + 6)::after {
+    background: linear-gradient(to right, rgba(87, 0, 250, 0.18), rgba(243, 25, 127, 0.18))
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-hot {
+    box-sizing: border-box;
+    padding: 0 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: max-content;
+    font-size: .88rem;
+    color: #fff;
+    line-height: 28px;
+    background-color: rgba(0, 24, 238, 0.08)
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-hot>i {
+    font-style: normal;
+    font-size: .75rem;
+    color: rgba(255, 255, 255, 0.68)
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-title {
+    position: relative
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-title>h2,
+body>.home>.main>.article-list>.article-list-item>.article-title>h3 {
+    margin: 0;
+    display: block;
+    position: relative;
+    width: max-content;
+    transition: all .3s;
+    z-index: 2
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-title>h2 {
+    color: #fff;
+    max-width: 148px;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-title>h3 {
+    width: 100%;
+    padding-top: 10px;
+    font-size: .88rem;
+    color: #9895a1;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .1s;
+    z-index: 1
+}
+
+body>.home>.main>.article-list>.article-list-item>.article-icon {
+    position: absolute;
+    left: .94vw;
+    top: .94vw;
+    width: 1.35vw
+}
+/* 保留 */
+@media screen and (max-width:1166px) {
+    body>.home>.main>.article-list {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+@media screen and (max-width:1066px) {
+    body>.home>.main>.article-list {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media screen and (max-width:856px) {
+    body>.home>.main>.article-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media screen and (max-width:556px) {
+    body>.home>.main>.article-list {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
